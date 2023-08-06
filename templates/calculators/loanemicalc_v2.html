@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Loan EMI Calculator</title>
+</head>
+<body>
+  <h1>Loan EMI Calculator</h1>
+  
+  <form id="emiForm">
+    <label for="loanAmount">Loan Amount:</label>
+    <input type="text" id="loanAmount" required><br><br>
+    
+    <label for="interestRate">Interest Rate (%):</label>
+    <input type="text" id="interestRate" required><br><br>
+    
+    <label for="loanTenure">Loan Tenure (months):</label>
+    <input type="text" id="loanTenure" required><br><br>
+  </form>
+  
+  <div id="result"></div>
+
+  <script>
+    // Add event listeners to input fields
+    document.getElementById("loanAmount").addEventListener("input", calculateEMI);
+    document.getElementById("interestRate").addEventListener("input", calculateEMI);
+    document.getElementById("loanTenure").addEventListener("input", calculateEMI);
+    
+    function calculateEMI() {
+      // Retrieve form values with comma handling
+      var loanAmount = parseFloat(document.getElementById("loanAmount").value.replace(/,/g, ''));
+      var interestRate = parseFloat(document.getElementById("interestRate").value.replace(/,/g, ''));
+      var loanTenure = parseFloat(document.getElementById("loanTenure").value.replace(/,/g, ''));
+      
+      // Calculate EMI
+      var monthlyInterest = interestRate / 100 / 12;
+      var emi = loanAmount * monthlyInterest * Math.pow(1 + monthlyInterest, loanTenure) / (Math.pow(1 + monthlyInterest, loanTenure) - 1);
+      
+      // Format result with comma separation
+      var formattedEMI = emi.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      
+      // Display result
+      document.getElementById("result").innerHTML = "EMI: ₹ " + formattedEMI;
+    }
+  </script>
+</body>
+</html>

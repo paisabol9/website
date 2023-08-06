@@ -84,7 +84,7 @@
               <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
               <li class="scroll-to-section"><a href="#about">About</a></li>
               <li class="scroll-to-section"><a href="#services">Services</a></li>
-              <li class="scroll-to-section"><a href="#portfolio">Testimonials</a></li>
+              <li class="scroll-to-section"><a href="{{url_for('one_test')}}">Testimonials</a></li>
               <li class="scroll-to-section"><a href="#blog">Blog</a></li>
               <li class="scroll-to-section"><a href="#waitlist">Join the List</a></li> 
               <li class="scroll-to-section"><a href="#waitlist"></a></li>
@@ -123,7 +123,7 @@
             </div>
             <div class="col-lg-6">
               <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
-                <img src="{{url_for('static', filename='assets/images/slider-dec-v3.png')}}" alt="">
+                <img src="{{url_for('static', filename='/assets/images/rupixen.jpg')}}" alt="">
               </div>
             </div>
           </div>
@@ -132,6 +132,43 @@
     </div>
   </div>
 
+  <!-- weform for the joining list -->
+  <div id="waitlist" class="free-quote">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 offset-lg-4">
+          <div class="section-heading  wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
+            <h6>Join The List!</h6>
+            <p>Drop Your Email Address to stay connected with Us!</p>
+            <div class="line-dec"></div>
+          </div>
+        </div>
+        <div class="col-lg-8 offset-lg-2  wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
+          <form id="search" action="#" method="GET">
+            <div class="row">
+              <div class="col-lg-4 col-sm-4">
+                <fieldset>
+                  <input type="web" name="web" class="website" placeholder="Your name" autocomplete="on" required>
+                </fieldset>
+              </div>
+              <div class="col-lg-4 col-sm-4">
+                <fieldset>
+                  <input type="address" name="address" class="email" placeholder="Email Address..." autocomplete="on" required>
+                </fieldset>
+              </div>
+              <div class="col-lg-4 col-sm-4">
+                <fieldset>
+                  <button type="submit" class="main-button">Send</button>
+                </fieldset>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!--
   <div id="about" class="about section">
     <div class="container">
       <div class="row">
@@ -146,10 +183,11 @@
               <div class="about-right-content">
                 <div class="section-heading">
                   <h6>PaisaBol</h6>
-                  <h4>What <em>You</em> will be able to do on PaisaBol</h4>
+                  <h4>What we have for <em>You</em></h4>
                   <div class="line-dec"></div>
                 </div>
-                <p>We are striving to create a platform where You can do all you need for managing, preserving, growing your money. Once you are able to take full control on an independent unbiased platform you will have the ability to choose the right products which you need, access information, connect with investment advisors and develope a plan which works for you. <a href="#waitlist">Join The List </a></p>
+                <p>Our platform has all you need to manage, track and grow your money. You are in full control! on an independent unbiased platform you will have the ability to choose the right products which you need, access information, connect with investment advisors and develope a plan which works for you. <a href="#waitlist">Join The List </a></p>
+                -->
                 <!--
                 <div class="row">
                   <div class="col-lg-4 col-sm-4">
@@ -235,31 +273,31 @@
                     <div class="first-thumb active">
                       <div class="thumb">
                         <span class="icon"><img src="{{url_for('static', filename='assets/images/service-icon-01.png')}}" alt=""></span>
-                        Track Your Money
+                        Track Your </br>Money
                       </div>
                     </div>
                     <div>
                       <div class="thumb">                 
                         <span class="icon"><img src="{{url_for('static', filename='assets/images/service-icon-02.png')}}" alt=""></span>
-                        Connect with Advisors
+                        Connect with </br> Advisors
                       </div>
                     </div>
                     <div>
                       <div class="thumb">                 
                         <span class="icon"><img src="{{url_for('static', filename='assets/images/service-icon-03.png')}}" alt=""></span>
-                        Make a Plan!
+                        Make a </br> Plan
                       </div>
                     </div>
                     <div>
                       <div class="thumb">                 
                         <span class="icon"><img src="{{url_for('static', filename='')}}assets/images/service-icon-04.png" alt=""></span>
-                        Track Your Goals
+                        Track Your </br>Goals
                       </div>
                     </div>
                     <div class="last-thumb">
                       <div class="thumb">                 
                         <span class="icon"><img src="{{url_for('static', filename='assets/images/service-icon-01.png')}}" alt=""></span>
-                        Watch Your Journey
+                        Watch Your </br>Journey
                       </div>
                     </div>
                   </div>
@@ -555,40 +593,6 @@
       </div>
     </div>
   </div>  
-  <div id="waitlist" class="free-quote">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 offset-lg-4">
-          <div class="section-heading  wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
-            <h6>Join The Invite List!</h6>
-            <p>Drop Your Email Address to stay connected with Us!</p>
-            <div class="line-dec"></div>
-          </div>
-        </div>
-        <div class="col-lg-8 offset-lg-2  wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
-          <form id="search" action="#" method="GET">
-            <div class="row">
-              <div class="col-lg-4 col-sm-4">
-                <fieldset>
-                  <input type="web" name="web" class="website" placeholder="Your name" autocomplete="on" required>
-                </fieldset>
-              </div>
-              <div class="col-lg-4 col-sm-4">
-                <fieldset>
-                  <input type="address" name="address" class="email" placeholder="Email Address..." autocomplete="on" required>
-                </fieldset>
-              </div>
-              <div class="col-lg-4 col-sm-4">
-                <fieldset>
-                  <button type="submit" class="main-button">Send</button>
-                </fieldset>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
 
   
 <!--
@@ -680,7 +684,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <p>Copyright © 2022 PaisaBol All Rights Reserved. 
+          <p>Copyright © 2023 PaisaBol All Rights Reserved. 
         </div>
       </div>
     </div>
